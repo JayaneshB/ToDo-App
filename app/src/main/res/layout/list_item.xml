@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:ellipsize="end"
-    android:maxLines="1"
-    android:textColor="@color/white"
-    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1">
+    android:ellipsize="start"
+    android:textColor="@color/black"
+    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+    android:singleLine="true">
 
 </TextView>

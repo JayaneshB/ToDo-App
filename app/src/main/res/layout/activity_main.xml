@@ -16,34 +16,24 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            app:titleTextColor="@color/white"
             style="@style/Toolbar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.Material3.AutoCompleteTextView.FilledBox"
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/dropdown_list"
                     android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:hint="@string/all_list"
-                    app:hintTextColor="@color/white"
+                    android:layout_height="22dp"
+                    android:inputType="none"
+                    android:textAlignment="textStart"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="LabelFor"
+                    tools:layout_editor_absoluteX="2dp" />
 
-                    <AutoCompleteTextView
-                        android:id="@+id/dropdown_list"
-                        android:layout_width="match_parent"
-                        android:layout_height="22dp"
-                        android:layout_marginStart="2dp"
-                        android:inputType="none"
-                        tools:ignore="LabelFor" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

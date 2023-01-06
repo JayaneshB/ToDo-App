@@ -10,37 +10,40 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/inputData_text"
         style="@style/Heading_Style"
+        android:layout_marginTop="32dp"
         android:text="@string/what_is_to_be_done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998"/>
+        app:layout_constraintVertical_bias="0.07999998" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/appCompatEditText"
         style="@style/TaskBox"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputData_text"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/dueDate_text"
         style="@style/Heading_Style"
+        android:layout_marginBottom="32dp"
         android:text="@string/due_date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appCompatEditText"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.110000014"
-        />
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/dueDate_box"
         style="@style/Date_Time_Box"
+        android:layout_marginTop="32dp"
         android:hint="@string/hint_setDate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,44 +56,45 @@
         style="@style/btn_image_calendar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toEndOf="@id/dueDate_box"
         app:layout_constraintTop_toBottomOf="@id/appCompatEditText"
-        app:layout_constraintVertical_bias="0.19"/>
+        app:layout_constraintVertical_bias="0.203" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeText_box"
         style="@style/Heading_Style"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:text="@string/time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dueDate_box"
-        app:layout_constraintVertical_bias="0.120000005"
-         />
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/timeBox_Data"
         style="@style/Date_Time_Box"
+        android:layout_marginBottom="32dp"
         android:hint="@string/set_time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timeText_box"
-        app:layout_constraintVertical_bias="0.0"
 
-         />
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_time"
         style="@style/btn_image_time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toEndOf="@id/timeBox_Data"
         app:layout_constraintTop_toBottomOf="@id/btn_calendar"
-        app:layout_constraintVertical_bias="0.19"/>
+        app:layout_constraintVertical_bias="0.243" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/repeatBox"
@@ -102,20 +106,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timeBox_Data"
-        app:layout_constraintVertical_bias="0.0"
-         />
+        app:layout_constraintVertical_bias="0.0"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/select"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        tools:ignore="MissingConstraints">
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <AutoCompleteTextView
+    <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/fragment_dropdownList"
         style="@style/fragment_dropDownList"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,8 +116,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/repeatBox"
-        app:layout_constraintVertical_bias="0.0"
-         />
+        app:layout_constraintVertical_bias="0.066" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/btn_save"

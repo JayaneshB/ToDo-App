@@ -1,13 +1,8 @@
 package com.project.to_do_app
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import android.widget.Adapter
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -39,7 +34,7 @@ class MainActivity : AppCompatActivity() {
          *  Setting the list values to the dropDown data
          */
 
-        val items = listOf("Default","Personal","Shopping","wishlist","work","Finished")
+        val items = listOf("All List","Personal","Shopping","wishlist","work","Finished")
         val adapter = ArrayAdapter(this,R.layout.list_item,items)
         binding.dropdownList.setAdapter(adapter)
 

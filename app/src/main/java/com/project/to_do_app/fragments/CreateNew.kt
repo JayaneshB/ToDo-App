@@ -9,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
+import android.widget.Spinner
 import android.widget.TimePicker
+import androidx.appcompat.app.AppCompatActivity
 import com.project.to_do_app.R
 import com.project.to_do_app.databinding.FragmentCreateNewBinding
 import java.text.SimpleDateFormat
@@ -88,6 +90,7 @@ class CreateNew : Fragment(), DatePickerDialog.OnDateSetListener,
             ).show()
         }
 
+
         /**
          *  Initialising the array for the dropDown list menu
          */
@@ -96,8 +99,9 @@ class CreateNew : Fragment(), DatePickerDialog.OnDateSetListener,
         val adapter = ArrayAdapter(requireContext(),R.layout.list_item,items)
         binding.fragmentDropdownList.setAdapter(adapter)
 
-
         return binding.root
+//        (requireContext() as AppCompatActivity).supportActionBar?.hide()
+        setHasOptionsMenu(false)
     }
 
 
