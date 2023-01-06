@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">To-Do-App</string>
+    <string name="todo_list">ToDo List</string>
+    <string name="search">search</string>
+    <string name="task_lists">Task Lists</string>
+    <string name="add_in_batch_mode">Add in Batch Mode</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="more_apps">More Apps</string>
+    <string name="send_feedback">Send feedback</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="invite_friends_to_the_app">Invite friends to the app</string>
+    <string name="settings">Settings</string>
+    <string name="all_list">All List</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="the_occured_event">The occured event</string>
+    <string name="the_due_date">The due date</string>
+    <string name="what_is_to_be_done">What is to be done?</string>
+    <string name="due_date">Due Date</string>
+    <string name="hint_task">Add the task</string>
+    <string name="hint_setDate">Set Date</string>
+    <string name="time">Time</string>
+    <string name="set_time">Set Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="select">Select</string>
+    <string name="set_date">Set Date</string>
+</resources>

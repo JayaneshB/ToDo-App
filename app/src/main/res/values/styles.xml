@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="appbar_layout">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="Toolbar">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:title">@string/todo_list</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+
+    </style>
+
+    <style name="Button_add">
+
+        <item name ="android:layout_width">45dp</item>
+        <item name ="android:layout_height">45dp</item>
+        <item name="android:background">@drawable/ic_btn_bg</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:src">@drawable/ic_baseline_add_24</item>
+
+    </style>
+
+    <style name="RecyclerView">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+
+    </style>
+
+    <style name ="CardView_Style">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">sans-serif</item>
+
+    </style>
+
+
+    <style name="style_CardView">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">3dp</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="cardCornerRadius">10dp</item>
+
+    </style>
+
+    <style name="linearLayout">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+
+    <style name="Heading_Style">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textStyle">bold</item>
+
+
+
+    </style>
+
+
+    <style name="TaskBox">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:hint">@string/hint_task</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="Date_Time_Box">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">120dp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="btn_image_calendar">
+
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/ic_btn_calendar</item>
+        <item name="android:src">@drawable/ic_baseline_calendar_month_24</item>
+        <item name="android:theme">@style/Widget.AppCompat.Button.Borderless</item>
+
+    </style>
+
+    <style name="btn_image_time">
+
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:background">@drawable/ic_btn_calendar</item>
+        <item name="android:src">@drawable/ic_baseline_access_time_24</item>
+        <item name="android:theme">@style/Widget.AppCompat.Button.Borderless</item>
+
+    </style>
+
+
+    <style name="fragment_dropDownList">
+
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:inputType">none</item>
+        <item name="android:hint">@string/select</item>
+
+    </style>
+
+
+    <style name="SaveButton">
+
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/ic_btn_bg</item>
+        <item name="android:src">@drawable/ic_baseline_check_24</item>
+
+    </style>
+
+
+</resources>
