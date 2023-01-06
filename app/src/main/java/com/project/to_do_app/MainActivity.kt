@@ -11,9 +11,12 @@ import android.widget.Adapter
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.project.to_do_app.database.DataObject
 import com.project.to_do_app.databinding.ActivityMainBinding
 import com.project.to_do_app.fragments.CreateNew
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -51,7 +54,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-//        recycler_view.adapter = Adapter()
+        recycler_view = binding.recyclerView
+
+        recycler_view.adapter = com.project.to_do_app.adapter.Adapter(DataObject.getData())
+        recycler_view.layoutManager = LinearLayoutManager(this)
+
+
 
 
 
