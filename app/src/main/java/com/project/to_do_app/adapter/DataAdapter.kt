@@ -10,29 +10,39 @@ import com.project.to_do_app.R
 import com.project.to_do_app.database.Data
 import kotlinx.android.synthetic.main.view.view.*
 
-class DataAdapter(var list:List<Data>, private val onClick: MainActivity) :
+class DataAdapter(var list: List<Data>, private val onClick: noteClickListener) :
     RecyclerView.Adapter<DataAdapter.viewHolder>() {
-    class viewHolder(view : View, onclick : noteClickListener ) : RecyclerView.ViewHolder(view) {
 
-        var title:TextView = view.findViewById(R.id.eventEntered)
-        var desc:TextView = view.findViewById(R.id.desc)
-        var date:TextView = view.findViewById(R.id.date)
+    class viewHolder(view: View, onclick: noteClickListener) : RecyclerView.ViewHolder(view) {
+
+        init {
+            itemView.setOnClickListener {
+
+                onclick.onItemClick(adapterPosition)
+            }
+        }
+
+        var title: TextView = view.findViewById(R.id.eventEntered)
+        var desc: TextView = view.findViewById(R.id.desc)
+        var date: TextView = view.findViewById(R.id.date)
+        var time: TextView = view.findViewById(R.id.time)
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.view,parent,false)
-        return viewHolder(view,onClick)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.view, parent, false)
+        return viewHolder(view, onClick)
 
     }
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
 
-        val data:Data = list[position]
+        val data: Data = list[position]
         holder.title.text = data.title
         holder.desc.text = data.desc
         holder.date.text = data.date
+        holder.time.text = data.time
 
     }
 

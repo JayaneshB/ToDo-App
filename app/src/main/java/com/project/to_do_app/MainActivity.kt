@@ -29,7 +29,7 @@ const val DATE = "DATE"
 const val TIME = "TIME"
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
 
     private lateinit var binding : ActivityMainBinding
 
@@ -44,26 +44,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.recyclerView.setHasFixedSize(true)
 
-        binding.toolbar.navigationIcon = getDrawable(R.drawable.ic_toolbar_lefticon)
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
 
         setData()
 
         /**
-         *  Setting the list values to the dropDown data
-         */
-
-
-        val items = listOf("All List","Personal","Shopping","wishlist","work","Finished")
-        val adapter = ArrayAdapter(this,R.layout.list_item,items)
-        binding.dropdownList.setAdapter(adapter)
-
-        /**
-         *  Add button action
+         *  Add button actionf
          */
 
         binding.btnAdd.setOnClickListener {
@@ -173,24 +162,11 @@ class MainActivity : AppCompatActivity() {
             noteDao?.deleteAllNotes()
             withContext(Dispatchers.Main) {
 
-                Toast.makeText(this@MainActivity,"Deleted Successfully",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Deleted Successfully", Toast.LENGTH_SHORT).show()
                 adapter.clearList()
 
             }
 
         }
-
-
-
-//    private fun replaceFragment(fragment: Fragment) {
-//
-//        val fragmentManager : FragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.id.fragment_Container,fragment)
-//        fragmentTransaction.commit()
-//    }
-//
-//
-
-
+    }
 }
