@@ -21,10 +21,17 @@
                 style="@style/CardView_Style"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/duedate"
-                android:text="@string/the_due_date"
+                android:id="@+id/desc"
+                android:text="@string/the_desc"
                 android:textSize="16sp"
                 style="@style/CardView_Style"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/CardView_Style"
+                android:id="@+id/date"
+                android:text="@string/date_created"
+                android:textSize="14sp"/>
+
 
 
 

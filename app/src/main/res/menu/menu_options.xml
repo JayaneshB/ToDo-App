@@ -7,6 +7,9 @@
         android:title="@string/search"
         app:showAsAction="ifRoom"/>
 
+    <item android:id="@+id/deleteAll"
+        android:title="@string/delete_all"/>
+
     <item android:id="@+id/taskList"
         android:title="@string/task_lists"/>
 

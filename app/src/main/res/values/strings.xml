@@ -15,7 +15,7 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="the_occured_event">The occurred event</string>
-    <string name="the_due_date">The due date</string>
+    <string name="the_desc">Description</string>
     <string name="what_is_to_be_done">What is to be done?</string>
     <string name="due_date">Due Date</string>
     <string name="hint_task">Add the task</string>
@@ -25,4 +25,13 @@
     <string name="repeat">Repeat</string>
     <string name="select">Select</string>
     <string name="set_date">Set Date</string>
+    <string name="date_created">Date Created</string>
+    <string name="hh_mm_ss">(HH/MM/SS)</string>
+    <string name="dd_mm_yyyy">(DD/MM/YYYY)</string>
+    <string name="date">Date</string>
+    <string name="enter_the_task_description">Enter the task description</string>
+    <string name="task_description">Task Description</string>
+    <string name="enter_the_title">Enter the Title</string>
+    <string name="title">Title</string>
+    <string name="delete_all">Delete All</string>
 </resources>
