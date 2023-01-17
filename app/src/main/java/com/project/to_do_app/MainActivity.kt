@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
         setData()
 
         /**
-         *  Add button actionf
+         *  Add button action
          */
 
         binding.btnAdd.setOnClickListener {
