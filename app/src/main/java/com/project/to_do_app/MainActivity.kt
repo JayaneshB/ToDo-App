@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
 
     private lateinit var list: List<Data>
 
+    private var lastClickTime : Long = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +59,13 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
          */
 
         binding.btnAdd.setOnClickListener {
+
+            if(SystemClock.elapsedRealtime() - lastClickTime < 1000)
+            {
+                return@setOnClickListener
+            }
+
+            lastClickTime = SystemClock.elapsedRealtime()
 
             val intent = Intent(this@MainActivity,AddNew::class.java)
             startActivityForResult(intent, REQUEST_CODE)
