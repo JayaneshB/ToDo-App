@@ -19,6 +19,7 @@ import java.util.*
 class AddNew : AppCompatActivity(),DatePickerDialog.OnDateSetListener,TimePickerDialog.OnTimeSetListener {
 
     private lateinit var binding: ActivityAddNewBinding
+
     private lateinit var calendar: Calendar
 
     private lateinit var formatter: SimpleDateFormat
@@ -72,7 +73,7 @@ class AddNew : AppCompatActivity(),DatePickerDialog.OnDateSetListener,TimePicker
          *  Initialising the array for the dropDown list menu
          */
 
-        val items = listOf("No repeat","Once a Day","Once a Day (Mon-Fri)","Once a Week","Once a Month","Once a Year")
+        val items = listOf("All Lists","Personal","Work")
         val adapter = ArrayAdapter(this@AddNew,R.layout.list_item,items)
         binding.activityDropdownList.setAdapter(adapter)
 

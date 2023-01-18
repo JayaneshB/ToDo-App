@@ -54,6 +54,16 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
 
         setData()
 
+
+        /**
+         *  Displaying the array list in the
+         *  spinner in the toolbar
+         */
+
+        val items= listOf("All Lists","Personal","Work")
+        val displayList = ArrayAdapter(this@MainActivity,R.layout.list_item,items)
+        binding.DropDownMain.setAdapter(displayList)
+
         /**
          *  Add button action
          */
@@ -73,6 +83,13 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
         }
 
     }
+
+
+
+    /**
+     *  Creating a new data
+     *
+     */
 
     private fun setData() {
 
@@ -161,6 +178,11 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
             .setNegativeButton("NO", null).show()
 
     }
+
+    /**
+     *  Deleting all the list in the
+     *  recycler view
+     */
 
     private fun deleteAllNotes() {
 

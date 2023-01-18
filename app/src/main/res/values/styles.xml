@@ -182,8 +182,16 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white</item>
 
+    </style>
 
+    <style name= "DropDownBox">
 
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:layout_marginStart">15dp</item>
 
 
 

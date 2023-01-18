@@ -22,7 +22,7 @@
     <string name="hint_setDate">Set Date (DD/MM/YYYY)</string>
     <string name="time">Time</string>
     <string name="set_time">Set Time (HH:MM:SS)</string>
-    <string name="repeat">Repeat</string>
+    <string name="category">Category</string>
     <string name="select">Select</string>
     <string name="set_date">Set Date</string>
     <string name="date_created">Date Created</string>

@@ -133,7 +133,7 @@
         android:id="@+id/appCompatTextView5"
         style="@style/TitleBox"
         android:layout_marginTop="24dp"
-        android:text="@string/repeat"
+        android:text="@string/category"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

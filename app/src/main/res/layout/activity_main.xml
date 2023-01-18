@@ -23,13 +23,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/appCompatTextView6"
-                    style="@style/TitleBox"
-                    android:layout_marginStart="16dp"
-                    android:text="To-Do App"
-                    android:textColor="@color/orangish_yellow"
-                    android:textSize="20sp"
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/DropDownMain"
+                    style="@style/DropDownBox"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
