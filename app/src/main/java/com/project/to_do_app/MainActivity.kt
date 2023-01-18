@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
 
     private lateinit var adapter: DataAdapter
 
-    private lateinit var list: List<Data>
+    private lateinit var list: MutableList<Data>
 
     private var lastClickTime : Long = 0
 
@@ -98,8 +98,8 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
 
         CoroutineScope(Dispatchers.IO).launch {
 
-            val list : List<Data> = dataDao.getAllNotes()
-            this@MainActivity.list= list
+           list=dataDao.getAllNotes()
+
             withContext(Dispatchers.Main){
                 adapter = DataAdapter(list,this@MainActivity)
                 binding.recyclerView.adapter = adapter
@@ -200,5 +200,27 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
             }
 
         }
+    }
+
+    override fun onLongClick(position: Int){
+
+        val note: Data = list[position]
+        val dialog = AlertDialog.Builder(this@MainActivity)
+            .setTitle("Delete")
+            .setMessage("Are you sure you want to delete this note?")
+            .setPositiveButton("Yes") { dialog: DialogInterface, which: Int ->
+
+                val database = MyDatabase.getInstance(this@MainActivity)
+                val data = database!!.dataDao()
+                CoroutineScope(Dispatchers.IO).launch {
+                    data.delete(note)
+                    list.removeAt(position)
+                    adapter.notifyDataSetChanged()
+//                adapter.notifyItemRemoved(position)
+                }
+            }
+        dialog.setNegativeButton("No", null)
+        val alert = dialog.create()
+        alert.show()
     }
 }

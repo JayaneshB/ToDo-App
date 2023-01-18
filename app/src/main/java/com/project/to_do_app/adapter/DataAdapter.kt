@@ -10,7 +10,8 @@ import com.project.to_do_app.R
 import com.project.to_do_app.database.Data
 import kotlinx.android.synthetic.main.view.view.*
 
-class DataAdapter(var list: List<Data>, private val onClick: noteClickListener) :
+class DataAdapter(var list: MutableList<Data>,
+                  private val onClick: noteClickListener) :
     RecyclerView.Adapter<DataAdapter.viewHolder>() {
 
     class viewHolder(view: View, onclick: noteClickListener) : RecyclerView.ViewHolder(view) {
@@ -43,6 +44,11 @@ class DataAdapter(var list: List<Data>, private val onClick: noteClickListener) 
         holder.desc.text = data.desc
         holder.date.text = data.date
         holder.time.text = data.time
+        holder.itemView.setOnClickListener {
+            onClick.onLongClick(position)
+            notifyDataSetChanged()
+            true
+        }
 
     }
 
@@ -51,15 +57,29 @@ class DataAdapter(var list: List<Data>, private val onClick: noteClickListener) 
         return list.size
 
     }
+    override fun getItemId(position: Int): Long {
+
+        return list[position].id.toLong()
+
+    }
+
+
 
     interface noteClickListener {
 
         fun onItemClick(position: Int)
+        fun onLongClick(position:Int)
     }
 
     fun clearList() {
 
-        list = emptyList()
+        list.clear()
+        notifyDataSetChanged()
+    }
+
+    fun deleteItem(position : Int) {
+
+        list.removeAt(position)
         notifyDataSetChanged()
     }
 }

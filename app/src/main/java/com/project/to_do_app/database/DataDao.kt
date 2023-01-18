@@ -15,7 +15,7 @@ interface DataDao {
     fun delete(data: Data)
 
     @Query("SELECT * FROM task_toDo")
-    fun getAllNotes(): List<Data>
+    fun getAllNotes(): MutableList<Data>
 
     @Query("DELETE FROM task_toDo")
     fun deleteAllNotes()
