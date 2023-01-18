@@ -110,7 +110,8 @@ class AddNew : AppCompatActivity(),DatePickerDialog.OnDateSetListener,TimePicker
                 binding.titleEdit.text.toString(),
                 binding.descEdit.text.toString(),
                 binding.dateEdit.text.toString(),
-                binding.timeEdit.text.toString()
+                binding.timeEdit.text.toString(),
+                binding.activityDropdownList.toString()
             )
             noteDao?.update(note)
             withContext(Dispatchers.Main) {
@@ -130,7 +131,8 @@ class AddNew : AppCompatActivity(),DatePickerDialog.OnDateSetListener,TimePicker
             binding.titleEdit.text.toString(),
             binding.descEdit.text.toString(),
             binding.dateEdit.text.toString(),
-            binding.timeEdit.text.toString()
+            binding.timeEdit.text.toString(),
+            binding.activityDropdownList.toString()
         )
         GlobalScope.launch {
             noteDao?.insert(note)

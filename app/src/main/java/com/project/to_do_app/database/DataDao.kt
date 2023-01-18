@@ -17,6 +17,9 @@ interface DataDao {
     @Query("SELECT * FROM task_toDo")
     fun getAllNotes(): MutableList<Data>
 
+    @Query("SELECT * FROM task_toDo where Category like :search")
+    fun search(search:String): MutableList<Data>
+
     @Query("DELETE FROM task_toDo")
     fun deleteAllNotes()
 

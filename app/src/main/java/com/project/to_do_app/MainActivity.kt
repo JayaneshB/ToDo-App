@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -63,6 +65,32 @@ class MainActivity : AppCompatActivity(), DataAdapter.noteClickListener {
         val items= listOf("All Lists","Personal","Work")
         val displayList = ArrayAdapter(this@MainActivity,R.layout.list_item,items)
         binding.DropDownMain.setAdapter(displayList)
+
+        binding.DropDownMain.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+
+                val database = MyDatabase.getInstance(this@MainActivity)
+                val dataDao = database!!.dataDao()
+
+                CoroutineScope(Dispatchers.IO).launch {
+
+                    list = dataDao.search()
+
+                    withContext(Dispatchers.Main) {
+                        adapter=DataAdapter(list,this@MainActivity)
+                        binding.recyclerView.adapter = adapter
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+//                TODO("Not yet implemented")
+            }
+
+
+        }
 
         /**
          *  Add button action

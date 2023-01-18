@@ -44,11 +44,11 @@ class DataAdapter(var list: MutableList<Data>,
         holder.desc.text = data.desc
         holder.date.text = data.date
         holder.time.text = data.time
-        holder.itemView.setOnClickListener {
-            onClick.onLongClick(position)
-            notifyDataSetChanged()
-            true
-        }
+//        holder.itemView.setOnClickListener {
+//            onClick.onLongClick(position)
+//            notifyDataSetChanged()
+//            true
+//        }
 
     }
 

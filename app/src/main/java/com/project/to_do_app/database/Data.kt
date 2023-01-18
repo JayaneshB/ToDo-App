@@ -17,7 +17,9 @@ class Data(
     @ColumnInfo(name = "Date")
     var date: String,
     @ColumnInfo(name="Time")
-    var time: String
+    var time: String,
+    @ColumnInfo(name="Category")
+    var category: String
 ) {
 
 }

@@ -5,6 +5,7 @@
     android:padding="10dp"
     android:ellipsize="start"
     android:textColor="@color/black"
+    android:background="@color/white"
     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
     android:singleLine="true">
 
